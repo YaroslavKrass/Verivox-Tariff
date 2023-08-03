@@ -1,0 +1,17 @@
+<div class="container">
+  <h1> Tariff calculator </h1>
+  <div class="content">
+    <app-consumption-form (consumptionChanges)="searchTariff($event)"> </app-consumption-form>
+    <ng-container *ngIf="tariffs$ | async as tariffs; else consumptionEmpty">
+      <ng-container *ngIf="tariffs.length; else noTariffFound">
+        <app-tariff-table [dataSource]="tariffs"> </app-tariff-table>
+      </ng-container>
+      <ng-template #noTariffFound>
+        <span class="body_2"> No tariffs found </span>
+      </ng-template>
+    </ng-container>
+    <ng-template #consumptionEmpty>
+      <span class="body_2"> Enter your consumption (kWh/y) </span>
+    </ng-template>
+  </div>
+</div>

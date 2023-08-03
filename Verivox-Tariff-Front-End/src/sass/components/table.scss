@@ -1,0 +1,15 @@
+@import '../variables/variables.scss';
+
+table {
+  width: 100%;
+
+  th {
+    color: $black !important;
+    text-align: center !important;
+  }
+
+  td {
+    text-align: center !important;
+    color: $black !important;
+  }
+}

@@ -1,0 +1,12 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <div class="content">
+    <mat-form-field>
+      <mat-label>kWh/y</mat-label>
+      <input matInput formControlName="consumption" class="body_2">
+    </mat-form-field>
+
+    <div>
+      <button mat-button class="body_2" [disabled]="form.invalid"> Find </button>
+    </div>
+  </div>
+</form>

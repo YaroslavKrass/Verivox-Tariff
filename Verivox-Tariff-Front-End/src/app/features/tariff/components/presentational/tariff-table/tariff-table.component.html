@@ -1,0 +1,15 @@
+<table mat-table [dataSource]="dataSource!" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="tariff">
+    <th mat-header-cell *matHeaderCellDef class="body_2"> Tariff </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="annualCost">
+    <th mat-header-cell *matHeaderCellDef class="body_2"> Annual Costs (€/year) </th>
+    <td mat-cell *matCellDef="let element"> {{element.annualCost}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
