@@ -1,0 +1,16 @@
+version: "1"
+
+services:
+  frontend:
+    build:
+      context: ./Verivox-Tariff-Front-End # Front-End Path
+    ports:
+      - "80:80"
+
+  backend:
+    build:
+      context: ./Verivox-Tariff-Back-End # Back-End Path
+    ports:
+      - "3000:3000"
+    depends_on:
+      - frontend # Run Front-End at first
