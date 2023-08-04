@@ -1,6 +1,7 @@
 
 const TariffService = require('./service');
 const { errorMessages } = require("../../common/constants/errors.const");
+const { logger } = require("../../common/logger/logger");
 
 class TariffController {
   static getTariffs() {

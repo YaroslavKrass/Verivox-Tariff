@@ -2,7 +2,7 @@ const fs = require("fs/promises");
 const { errorMessages } = require("../../common/constants/errors.const");
 
 class WebService {
-    static async getPrividerTariffs() {
+    static async getProviderTariffs() {
         try {
             const tariffs = await fs.readFile("./tariffs-data.json");
     
